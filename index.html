@@ -23,9 +23,14 @@
 <script>
 	
 	window.addEventListener('resize', function(event){
-   		const vw = body.clientWidth,vh = body.clientHeight
-   		document.querySelector("#width").innerHTML=vw;
-		document.querySelector("#height").innerHTML=vh;
+   		var win = window,
+		    doc = document,
+		    docElem = doc.documentElement,
+		    body = doc.getElementsByTagName('body')[0],
+		    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+		    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+   		document.querySelector("#width").innerHTML=x;
+		document.querySelector("#height").innerHTML=y;
 	});
 </script>
 </html>
