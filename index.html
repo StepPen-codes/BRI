@@ -1,0 +1,31 @@
+<html>
+<title>Browser Viewport Identifier</title>
+<style type="text/css">
+	body{
+		display:grid;
+		place-items:center;
+		margin:0;
+		height:100%;
+		width:100%;
+	}
+	div{
+		font:5vmin helvetica;
+		text-align: center;
+	}
+
+</style>
+<body>
+	<div>
+		<span class="msg">Browser Viewport Identifier</span><br>
+		<span id="width"></span>/<span id="height"></span>
+	</div>
+</body>
+<script>
+	
+	window.addEventListener('resize', function(event){
+   		const vw = body.clientWidth,vh = body.clientHeight
+   		document.querySelector("#width").innerHTML=vw;
+		document.querySelector("#height").innerHTML=vh;
+	});
+</script>
+</html>
