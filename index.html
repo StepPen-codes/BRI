@@ -22,12 +22,9 @@
 </body>
 <script>
 	function Hello(){
-   		var win = window,
-		    doc = document,
-		    docElem = doc.documentElement,
-		    body = doc.getElementsByTagName('body')[0],
-		    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
-		    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+   		var x,y,body=document.querySelector("body").getBoundingClientRect();
+   		x = body.width
+   		y = body.height
    		document.querySelector("#width").innerHTML=x;
 		document.querySelector("#height").innerHTML=y;
 	}
