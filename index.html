@@ -21,8 +21,7 @@
 	</div>
 </body>
 <script>
-	
-	window.addEventListener('resize', function(event){
+	function Hello(){
    		var win = window,
 		    doc = document,
 		    docElem = doc.documentElement,
@@ -31,6 +30,7 @@
 		    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
    		document.querySelector("#width").innerHTML=x;
 		document.querySelector("#height").innerHTML=y;
-	});
+	}
+	window.addEventListener('resize', Hello);
 </script>
 </html>
